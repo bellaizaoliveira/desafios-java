@@ -1,0 +1,87 @@
+### O Que É Debug?
+
+O debug é o processo de encontrar e corrigir falhas ou "bugs" no código. Ele permite que você execute o código linha por linha, examine o 
+estado das variáveis, e veja como o fluxo do programa está sendo executado. Isso ajuda a identificar onde as coisas estão indo mal e entender 
+por que o código não está funcionando como esperado.
+
+
+
+### Por Que Usar Debug?
+
+    1. **Identificação de Problemas:** Debug ajuda a localizar onde os erros ocorrem e por que.
+    2. **Análise do Fluxo de Execução:** Permite observar o fluxo do programa e ver como ele se comporta em tempo real.
+    3. **Exame de Variáveis:** Você pode inspecionar o valor das variáveis durante a execução do código.
+    4. **Teste de Correções:** Permite testar e verificar se as correções feitas resolvem o problema sem introduzir novos erros.
+
+
+
+### Como Utilizar o Debug
+
+A forma de utilizar o debug pode variar um pouco dependendo da ferramenta ou IDE que você está usando. Aqui estão os passos gerais para a depuração, 
+usando uma IDE popular como exemplo.
+
+
+
+#### **1. Configurando Breakpoints**
+
+- **O que é um Breakpoint?**
+  - Um breakpoint é um ponto específico no código onde a execução do programa será pausada. Isso permite que você examine o estado do programa naquele ponto.
+
+- **Como Configurar:**
+  - **No Eclipse:** Clique na margem esquerda ao lado da linha do código onde deseja adicionar um breakpoint. Um círculo azul aparecerá indicando o breakpoint.
+  - **No IntelliJ IDEA:** Clique na margem esquerda ao lado da linha do código onde deseja adicionar um breakpoint. Um ponto vermelho aparecerá indicando o breakpoint.
+  - **No Visual Studio Code:** Clique na margem esquerda ao lado da linha do código onde deseja adicionar um breakpoint. Um ponto vermelho aparecerá.
+
+
+
+#### **2. Iniciar o Debug**
+
+- **No Eclipse:** Clique com o botão direito no arquivo contendo o método `main` e selecione "Debug As" > "Java Application". A execução será iniciada em modo de depuração.
+- **No IntelliJ IDEA:** Clique no ícone de bug (debug) ao lado do botão de execução ou use o atalho `Shift + F9`.
+- **No Visual Studio Code:** Clique no ícone de depuração na barra lateral esquerda e, em seguida, clique no botão de iniciar depuração.
+
+
+
+#### **3. Navegar pelo Código Durante o Debug**
+
+- **Passo a Passo:**
+  - **Step Over (F6):** Avança para a próxima linha de código sem entrar em métodos chamados.
+  - **Step Into (F5):** Entra dentro de métodos chamados na linha atual.
+  - **Step Out (Shift + F5):** Sai do método atual e retorna ao ponto onde ele foi chamado.
+  - **Resume (F8):** Continua a execução até o próximo breakpoint.
+
+- **Examine Variáveis:**
+  - Durante a depuração, você pode visualizar o valor das variáveis em tempo real na aba de variáveis ou no painel de inspeção de variáveis da IDE.
+
+
+
+#### **4. Adicionar Watchpoints**
+
+- **O que é um Watchpoint?**
+  - Um watchpoint é um tipo especial de breakpoint que pausa a execução quando uma variável específica é modificada.
+
+- **Como Adicionar:**
+  - **No Eclipse:** Clique com o botão direito na variável e selecione "Add Watch Expression".
+  - **No IntelliJ IDEA:** Clique com o botão direito na variável e selecione "Add Watch".
+
+
+
+#### **5. Corrigir e Reexecutar**
+
+- Após identificar e corrigir o problema, você pode parar a depuração e executar o programa novamente para verificar se a correção funcionou. Certifique-se 
+de remover ou desativar os breakpoints após a depuração para evitar pausas desnecessárias em execuções futuras.
+
+### Exemplos de Uso de Debug
+
+    **Exemplo 1:** Se você tem um método que não está retornando o resultado esperado, você pode colocar um breakpoint na linha onde o valor é retornado e 
+    verificar se a variável possui o valor correto.
+
+    **Exemplo 2:** Se um loop está se comportando de forma inesperada, você pode adicionar breakpoints dentro do loop para verificar como e quando a 
+    condição de saída é avaliada.
+
+
+
+### Conclusão
+
+O uso do debug é fundamental para entender o comportamento do código e resolver problemas complexos. Praticar o uso de ferramentas de depuração e se 
+familiarizar com os conceitos de breakpoints e navegação passo a passo tornará a depuração mais eficaz e eficiente.
