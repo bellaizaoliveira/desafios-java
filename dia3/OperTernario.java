@@ -2,7 +2,7 @@
 public class OperTernario {
     
     // Método principal, onde a execução do programa começa
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         // Declara e inicializa uma variável inteira chamada ingresso com o valor 400
         int ingresso = 400;
