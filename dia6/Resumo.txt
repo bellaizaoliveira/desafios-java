@@ -1,0 +1,149 @@
+RESUMO: Classes, Construtores, Encapsulamento, Getters e Setters
+
+Índice
+1. Classes
+2. Construtores
+3. Encapsulamento
+4. Getters e Setters
+
+1. Classes
+
+Em Java, uma classe é uma estrutura que define um tipo de objeto. Ela serve como um molde para criar instâncias (objetos) e pode
+ conter métodos (funções) e variáveis (atributos).
+
+Exemplo de Classe
+
+public class Pessoa {
+    // Atributos
+    String nome;
+    int idade;
+    
+    // Método
+    void apresentar() {
+        System.out.println("Olá, meu nome é " + nome + " e eu tenho " + idade + " anos.");
+    }
+}
+
+Neste exemplo, a classe Pessoa tem dois atributos (nome e idade) e um método (apresentar).
+
+-------------------------------------------------------------
+
+2. Construtores
+
+Um construtor é um método especial que é chamado automaticamente quando um objeto é criado. Ele é usado para inicializar o objeto.
+
+Exemplo de Construtor
+
+public class Pessoa {
+    String nome;
+    int idade;
+
+    // Construtor
+    public Pessoa(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+    void apresentar() {
+        System.out.println("Olá, meu nome é " + nome + " e eu tenho " + idade + " anos.");
+    }
+}
+
+Aqui, o construtor Pessoa(String nome, int idade) inicializa os atributos nome e idade quando um objeto da classe Pessoa é criado.
+
+-------------------------------------------------------------
+
+
+3. Encapsulamento
+
+Encapsulamento é o princípio de esconder os detalhes internos de uma classe e expor apenas o necessário. Em Java, isso é alcançado usando
+modificadores de acesso e métodos getter e setter.
+
+Exemplo de Encapsulamento
+
+public class Pessoa {
+    // Atributos privados
+    private String nome;
+    private int idade;
+
+    // Construtor
+    public Pessoa(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+    // Getters
+    public String getNome() {
+        return nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    // Setters
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    void apresentar() {
+        System.out.println("Olá, meu nome é " + nome + " e eu tenho " + idade + " anos.");
+    }
+}
+
+Aqui, os atributos nome e idade são privados. Isso significa que eles não podem ser acessados diretamente fora da classe. 
+Em vez disso, é necessário usar os métodos getter e setter para acessar ou modificar esses atributos.
+
+-------------------------------------------------------------
+
+
+4. Getters e Setters
+
+Getters e setters são métodos que permitem acessar e modificar atributos privados de uma classe.
+
+Exemplo de Getters e Setters
+
+public class Pessoa {
+    private String nome;
+    private int idade;
+
+    // Construtor
+    public Pessoa(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+    // Getter para o nome
+    public String getNome() {
+        return nome;
+    }
+
+    // Setter para o nome
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    // Getter para a idade
+    public int getIdade() {
+        return idade;
+    }
+
+    // Setter para a idade
+    public void setIdade(int idade) {
+        if (idade > 0) { // Validação simples
+            this.idade = idade;
+        }
+    }
+
+    void apresentar() {
+        System.out.println("Olá, meu nome é " + nome + " e eu tenho " + idade + " anos.");
+    }
+}
+
+Neste exemplo, getNome e setNome são métodos para acessar e modificar o atributo nome, enquanto getIdade
+e setIdade fazem o mesmo para o atributo idade. O método setIdade inclui uma validação simples para garantir 
+que a idade seja um valor positivo.
